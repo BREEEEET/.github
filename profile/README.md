@@ -1,3 +1,3 @@
 ## WOW
--did you know that
+- did you know that
 - well now you know
