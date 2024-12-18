@@ -1,5 +1,54 @@
 import random
 import json
+from gameMenu import showGameMenu
+from setupGame import setupNewGame
+from play import play
+print('hello')
+#eventually seperate all the functions into different files i guess
+#load cards grom json file
+
+
+#play timeline
+# 1. game menu
+    # 1.1 select number of players.
+    # 1.2 difficulty level
+    # 1.3 [bots on/off]
+    # 2. setup new game
+    #2.1 deal starting card to each player
+    # 2.2 show instructions ( tell how to play the game)
+    # 2.3 pick starting player
+        #new: player order
+    # 3. play game (player turns)
+        # 3.1 starting player turn
+            # requires: players, bots
+            # new: turn order?, current player turn?
+        #3.2 select next player
+            #requires: turn order, 
+            #modifies: current players turn?.
+            #new: next player's turn?
+        # 3.3 take turn
+            #Requires: cards, already played cards, current players turn
+            #new: check points? 
+    #3.4 check if player won/ game is over, if so goto 4.
+        #requires: check_points 
+    #3.5 goto 3.2
+
+    # 4. show who winner is
+def timeline():
+    stuff = showGameMenu()
+    other = setupNewGame(stuff[0],stuff[1],stuff[2],stuff[3],stuff[4])
+    
+    play(other[1],other[0],other[2],other[3],other[4],other[5],other[6],other[7])
+
+
+
+#print(showGameMenu())
+#timeline()
+timeline()
+
+"""
+import random
+import json
 print('hello')
 #eventually seperate all the functions into different files i guess
 #load cards grom json file
